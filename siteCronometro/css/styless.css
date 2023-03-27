@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    background-color: #e2e2e2;
+    height: 100vh;
+}
+
+.container h1 {
+    color: #175cff;
+    font-size: 50px;
+}
+
+.timer {
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color: #333;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    color: #172923;
+    min-width: 100px;
+}
+
+.separator {
+    padding: 0 8px;
+    color: #525763;
+}
+
+#milliseconds {
+    font-size: 30px;
+    color: #525763;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    width: 200px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+#startBtn {
+    background-color: #175cff;
+    color: #fff;
+}
+
+#pauseBtn,
+#resumeBtn {
+    display: none;
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 450px) {
+    .container {
+        height: 100vh;
+        padding: 1rem;
+    }
+
+    .container h1 {
+        font-size: x-large;
+    }
+
+    .timer {
+        font-size: 40px;
+    }
+
+    .time {
+        min-width: 40px;
+        font-size: 20px;
+    }
+
+    #milliseconds {
+        font-size: 15px;
+    }
+
+    .btn {
+        width: 100px;
+        font-size: 14px;
+    }
+}
+
+/* For screens between 600px and 1200px */
+@media (min-width: 700px) and (max-width: 1200px) {
+    .container {
+        height: 100vh;
+        width: 110vh;
+        padding: 2rem;
+    }
+
+    .container h1 {
+        font-size: x-large;
+    }
+
+    .timer {
+        font-size: 50px;
+    }
+
+    .time {
+        min-width: 100px;
+        font-size: 36px;
+    }
+
+    #milliseconds {
+        font-size: 30px;
+    }
+
+    .btn {
+        width: 180px;
+        font-size: 16px;
+    }
+}
+
+/* For screens larger than 1200px */
+@media (min-width: 1200px) {
+    .container {
+        height: 96vh;
+        padding-top: 2rem;
+    }
+
+    .timer {
+        font-size: 60px;
+    }
+
+    .time {
+        min-width: 110px;
+        font-size: 48px;
+    }
+
+    #milliseconds {
+        font-size: 40px;
+    }
+
+    .btn {
+        width: 200px;
+        font-size: 18px;
+    }
+}
